@@ -1,0 +1,42 @@
+body {
+	margin: 0;
+	font-family: arial;
+	background-color: #fefefe;
+	color: #0e0e0e;
+}
+
+.container {
+	width: 700px;
+	margin: 0 auto;
+}
+
+.btns-container {
+	display: flex;
+	justify-content: space-between;
+	padding: 50px 0;
+}
+
+button {
+	width: 100%;
+	padding: 10px 0;
+	font-size: 14px;
+	background-color: gray;
+	margin: 0 5px;
+	color: #fefefe;
+	border: none;
+}
+
+.uls-container {
+	display: flex;
+	justify-content: space-between;
+	flex-direction: row;
+}
+
+.ul {
+	width: 100%;
+	text-align: center;
+}
+
+li {
+	margin-top: 10px;
+}
