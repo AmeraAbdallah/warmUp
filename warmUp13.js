@@ -45,6 +45,14 @@ function solution(roman){
     var romans = roman.split('');
     var res = 0;
     for(var i = 0; i < romans.length; i++){
+
+        var zeros = '1';
+        for(var j = 0; j < romans.length - i; j++){
+            zeros += '0';
+        }
+        console.log(zeros)
+
+        zeros = parseInt(zeros);
         if(romans[i] === 'I'){
             res += 1;
         } else if(romans[i] === 'V'){
