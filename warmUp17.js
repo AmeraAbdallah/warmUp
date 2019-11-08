@@ -1,8 +1,15 @@
 // There is a special keyboard with all keys in a single row.
 // ​
-// Given a string keyboard of length 26 indicating the layout of the keyboard (indexed from 0 to 25), initially your finger is at index 0. To type a character, you have to move your finger to the index of the desired character. The time taken to move your finger from index i to index j is |i - j|.
+
+// Given a string keyboard of length 26 indicating the layout of the keyboard 
+//(indexed from 0 to 25), initially your finger is at index 0. 
+//To type a character, you have to move your finger to the index of the desired 
+//character. The time taken to move your finger from index i to index j is |i - j|.
+
+
 // ​
-// You want to type a string word. Write a function to calculate how much time it takes to type it with one finger.
+// You want to type a string word. Write a function to calculate how much 
+//time it takes to type it with one finger.
 // ​
  
 // ​
@@ -10,7 +17,8 @@
 // ​
 // Input: keyboard = "abcdefghijklmnopqrstuvwxyz", word = "cba"
 // Output: 4
-// Explanation: The index moves from 0 to 2 to write 'c' then to 1 to write 'b' then to 0 again to write 'a'.
+// Explanation: The index moves from 0 to 2 to write 'c' then to 1 to write 'b' 
+//then to 0 again to write 'a'.
 // Total time = 2 + 1 + 1 = 4. 
 // Example 2:
 // ​
@@ -27,6 +35,32 @@
 
 // ​
 // ​
-// var calculateTime = function(keyboard, word) {
+function each(array, f){
+	for(var i = 0; i < array.length; i++){
+		f(array[i], i);
+	}
+}
+
+var calculateTime = function(keyboard, word) {
+    var time = 0; 
+    var indexForLastElement = 0;   
+    each(word.split(''), function(wordElement, j){
+    	each(keyboard.split(''), function(keyboardElement, i){
+    		if(keyboardElement === wordElement) {
+    			var d = i - indexForLastElement;
+    			if(d < 0){
+    				d = d * -1;
+    			}
+    			time = time + d;
+    			indexForLastElement = i;
+    		}
+    	});
+    });
     
-// };
+    return time;
+}
+var keyboard = "pqrstuvwxyzabcdefghijklmno";
+var word = "leetcode"
+
+calculateTime(keyboard, word)
+
