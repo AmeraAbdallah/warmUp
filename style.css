@@ -1,0 +1,36 @@
+* {
+	color: #fff;
+}
+
+body {
+	background-color: blue;
+}
+
+img {
+	
+	display: inline-block;
+}
+
+button {
+	color: #000;
+	width: 80px;
+	height: 45px;
+
+}
+
+#buttonOne {
+	font-family: Georgia, serif;
+}
+
+#buttonTwo {
+	font-synthesis: "Gill Sans", sans-serif;
+}
+
+.imagesContainer {
+	display: flex;
+	flex-direction: row;
+}
+
+.buttonContainer {
+	margin: 50px 100px;
+}

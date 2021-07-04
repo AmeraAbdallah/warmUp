@@ -1,0 +1,32 @@
+body {
+	background-color: #eee;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center; 
+}
+
+input {
+	margin-top: 200px;
+	padding: 5px;
+	border: none;
+	font-size: 16px;
+}
+
+#btn {
+	margin-top: 20px;
+	border: 1px solid #CCC;
+	font-size: 15px;
+	width: 100px;
+	height: 45px;
+}
+
+.green {
+	color: green;
+}
+
+.red {
+	color: red;
+}
